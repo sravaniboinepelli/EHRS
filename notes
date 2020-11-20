@@ -1,0 +1,36 @@
+
+
+Implemented roles for Doctor(adds patient and patient record), patient(patient address is the id to record) and Health care provider(just to view the record)
+
+Highlight dapp (good ui layout) and basic ether and ipfs 
+
+Reference links:
+
+Sample Health Record:
+https://www.ahrq.gov/ncepcr/tools/pf-handbook/mod8-app-b-monica-latte.html
+
+etherium and ipfs interaction.
+ariera.future-processing.pl/blog/storing-files-in-a-distributed-file-system-using-blockchain-technology/
+
+Gives better understanding of drizzle usage
+https://developer.aliyun.com/mirror/npm/package/@drizzle/store
+
+ipfs and ethereum
+https://itnext.io/build-a-simple-ethereum-interplanetary-file-system-ipfs-react-js-dapp-23ff4914ce4e
+
+https://medium.com/coinmonks/guide-to-ownership-and-access-control-in-solidity-f2d99f63c6d4 (roles)
+
+Note:
+Currently contract assumes one file for patient record and stores one ipfsHash for that file.
+Patient record usually needs to be adaptable so may need to make it accept a file for each field. Or some other form of storing medical history. (Like in here: https://www.ahrq.gov/ncepcr/tools/pf-handbook/mod8-app-b-monica-latte.html) 
+
+patientrecord patientid/personal/history/tests/ medications/physical exam/ 
+
+PatientRecord contract(create, read, update, remove)
+
+
+patient signature verification for update record: Currently, the contract assumes front end takes care of it and calls contract updateRecordByPatient once signature verification/patient approval is done.  
+Get Record throws an error till this second update is called after the first update since the info isnt final.
+
+
+
