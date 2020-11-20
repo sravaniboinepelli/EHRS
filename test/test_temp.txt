@@ -1,0 +1,43 @@
+
+rm -rf build 
+truffle compile 
+/ganache-2.4.0-linux-x86_64.AppImage
+ In ganache create new workspace from addproject select truffle-config.js and save workspace
+ From accounts section get last 3 accounts and provide them with , to members param in migrate call. Below is an example .
+
+truffle migrate reset
+
+truffle console
+Quick test with  2 roles
+
+
+let accounts = await web3.eth.getAccounts()
+
+
+var member1 = accounts[2];
+var member2 = accounts[1];
+
+var member3 = accounts[9];
+var member4 = accounts[8];
+var member5 = accounts[7];
+
+inst1 = await EHRS.deployed();
+
+
+ipfsHash = "myHash"
+ipfsHash2 = "myHash2"
+inst1.addDoctor(member1);
+inst1.addhealthCareProvider(member2);
+
+inst1.addRecord(member3, ipfsHash, {from:member1})
+inst1.addRecord(member4, ipfsHash, {from:member1})
+
+
+inst1.updateRecord(member3,ipfsHash2, {from:member1})
+inst1.updateRecordByPatient({from:member3})
+
+inst1.getRecord(member3, {from:member1})
+inst1.getRecord(member3, {from:member2})
+inst1.getRecord(member3, {from:member3})
+
+inst1.deleteRecord(member3, {from:member1})

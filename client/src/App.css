@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.center{
+  margin: auto;
+}
+
+.middle{
+  margin-top: 40px !important;
+  width: 400px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.content {
+  background-color: #000000;
+  padding: 5%;
+  opacity: 0.7;
+  z-index: 0;
+  margin: 0 auto;
+  width: 800px;
+  max-width: 80%;
+}
+
+.landingBody {
+  margin: auto;
+  align-items: center;
+  background-image: url('img/home.jpg');
+  /* position: fixed; */
+  height: 94.3vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+.white-text{
+  color: white;
+}
+
+.or-text{
+  color: rgb(115, 188, 236) !important;
+}
+
+.red-text{
+  color: rgba(99, 87, 200, 0.863) !important;
+}
+.heading {
+  color: #ffffff;
+  font-size: 2vw;
+}
+
+.subheading {
+  color: #ffffff;
+  font-size: 1.2vw;
+  margin-bottom: 1rem;
+}
+
+.page{
+  margin-top: 2%;
+}
+
+.error {
+  margin: 2%;
+}
+
+/* @media screen and (min-width: 601 */
+
+@media screen and (min-width: 601) {
+  .heading {
+    font-size: 50px;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 30px;
+  }
+  .subheading {
+    font-size: 15px;
+  }
+}
