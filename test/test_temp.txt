@@ -41,3 +41,6 @@ inst1.getRecord(member3, {from:member2})
 inst1.getRecord(member3, {from:member3})
 
 inst1.deleteRecord(member3, {from:member1})
+
+npm install github:barrysteyn/node-scrypt#fb60a8d3c158fe115a624b5ffa7480f3a24b03fb
+
